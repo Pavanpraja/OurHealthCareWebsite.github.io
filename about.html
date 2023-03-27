@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+        integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <title>ifitness - Healthy world 2023</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Balsamiq+Sans:ital@0;1&family=Caveat:wght@700&family=Lobster&family=Mynerve&family=PT+Sans+Narrow:wght@700&family=PT+Serif:ital@1&family=Tilt+Warp&family=Ubuntu:wght@700;700;700&display=swap');
+
+        :root {
+            --font1: 'Ubuntu', sans-serif;
+        }
+
+        body {
+            background-color: #d9d9d9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .navigation {
+            padding: 0 34px;
+            height: 69px;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 0px 3px 12px gray;
+            border-radius: 37px;
+            position: sticky;
+            top: 0;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-left ul li {
+            list-style: none;
+            margin: 0 26px;
+            font-family: var(--font1);
+        }
+
+        .nav-left ul li a {
+            text-decoration: none;
+            color: black;
+            text-shadow: 3px 3px 3px gray;
+            opacity: 0.7;
+            padding: 7px;
+        }
+
+        .nav-left ul li a:hover {
+            background-color: rgb(228, 221, 221);
+            color: aqua;
+            border-radius: 25px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nav-left ul {
+            display: flex;
+            margin: 0 71px;
+            font-size: 18px;
+        }
+
+        .max-width-1 {
+            max-width: 80vw;
+        }
+
+        .m-auto {
+            margin: auto;
+        }
+
+        .max-width-2 {
+            max-width: 60vw;
+        }
+
+        .logo img {
+            height: 69px;
+            opacity: 100;
+        }
+
+        .btn {
+            font-family: var(--font1);
+            padding: 8px 12px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            margin-left: 8px;
+            border-radius: 25px;
+            background: white;
+            box-shadow: 1px 1px 4px 1px gray;
+            text-shadow: 2px 2px 2px #8d8d8d;
+        }
+
+        .btn:hover {
+            background-color: rgb(228, 221, 221);
+            color: aqua;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .form-input {
+            padding: 6px;
+            font-size: 16px;
+            background-color: var(--color-realbox-background);
+            border: none;
+            font-family: var(--font1);
+            font-size: inherit;
+            outline: 0;
+            padding-inline-start: 52px;
+            width: 100%;
+            box-shadow: 1px 1px 4px 1px gray;
+            height: 21px;
+            border-radius: 25px;
+
+        }
+
+        .content {
+            display: flex;
+            height: 427px;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            margin-top: 56px;
+            background-color: #f3f3f3;
+            border-radius: 58px;
+            box-shadow: 1px 1px 10px 1px gray;
+            /* background-color: gray; */
+        }
+
+        .content-left {
+            display: flex;
+            font-family: var(--font1);
+            width: 50%;
+            justify-content: center;
+            flex-direction: column;
+            text-shadow: 2px 4px 2px gray;
+            gap: 12px;
+            opacity: 0.8;
+        }
+
+        .content-right img {
+            height: 254px;
+            border: 1px solid #efd9ca;
+            border-radius: 50%;
+            width: 258px;
+            margin-left: 104px;
+            box-shadow: 2px 2px 7px 2px gray;
+            opacity: 0.9;
+        }
+
+        .home-exercises {
+            height: 455px;
+            background-color: gray;
+        }
+
+        .home-exercises {}
+
+        .footer {
+            height: 32px;
+            background-color: #9b9f9f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 15px;
+            border-radius: 28px;
+            width: 107vw;
+            box-shadow: 1px 1px 6px 5px gray;
+            text-shadow: 5px 9px 16px black;
+            position: relative;
+            top: 47px;
+        }
+
+        .home-exercise-content h3 {
+            color: red;
+        }
+
+        .home-exercise-img {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            right: 35px;
+            bottom: 35px;
+        }
+
+        .home-exercise1-img {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            right: 60px;
+            bottom: 81px;
+        }
+
+        .home-exercise2-img {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            right: 60px;
+            bottom: 81px;
+            top: -13px;
+        }
+
+        .home-exercise3-img {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            right: 60px;
+            bottom: 35px;
+        }
+
+        .home-exercise3-img img {
+            position: relative;
+            right: 25px;
+            bottom: 2px;
+        }
+
+        .home-exercise2-img img {
+            width: 90%;
+        }
+
+        .h2 {
+            font-family: var(--font1);
+            text-shadow: 2px 4px 2px gray;
+            opacity: 0.8;
+        }
+
+        .home-exercise-content span {
+            font-family: var(--font1);
+            text-shadow: 2px 4px 2px gray;
+            opacity: 0.8;
+        }
+
+        .home-exercise-content span h3 {
+            text-shadow: 2px 4px 5px red;
+        }
+
+        h5 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            top: 37px;
+            font-size: 34px;
+            text-shadow: 2px 4px 2px gray;
+            opacity: 0.8;
+            font-family: var(--font1);
+
+        }
+
+        .home-exercises {
+            display: flex;
+            height: 427px;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            margin-top: 56px;
+            background-color: #f7f7f7;
+            border-radius: 218px;
+            box-shadow: 1px 1px 10px 1px gray;
+            margin-bottom: -27px;
+        }
+
+        .home-exercise {
+            display: inherit;
+            align-items: center;
+        }
+
+        .about-img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            text-shadow: 2px 4px 2px gray;
+            opacity: 0.8;
+            font-family: var(--font1);
+            position: relative;
+            right: 81px;
+            color: #3a5252;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navigation max-width-1 m-auto">
+        <div class="nav-left">
+            <div class="logo">
+                <img src="logo.png" alt="logo">
+            </div>
+            <ul class="nav-list">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <form class="nav-right" action="about.html" method="get">
+            <!-- <div class="nav-right"> -->
+            <input class="form-input" type="text" name="query" placeholder="search here...">
+            <button class="btn">Search</button>
+        </form>
+        <!-- </div> -->
+        </form>
+    </nav>
+
+    <div class="max-width-1 m-auto"></div>
+    <h5>About Some Exercises For Health</h5>
+    <div class="home-exercises max-width-1 m-auto">
+        <div class="home-exercise m-auto">
+            <div class="home-exercise-img">
+                <img src="BuildRipplingAbs.png" alt="image">
+                <div class="h2">
+                    <h2>Build Rippling Abs</h2>
+                </div>
+            </div>
+            <div class="about-img">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing. <br> Amet est, necessitatibus placeat nobis
+                    consequuntur nisi <br> animi voluptatem dolor natus odio illo pariatur <br> soluta nam blanditiis
+                    quod debitis harum provident <br> adipisci quisquam repudiandae? Ipsam, veritatis?</p>
+            </div>
+            <div class="home-exercise-content">
+                <!-- <h2>Build Rippling Abs</h2> -->
+                <span>
+                    <h4>You have to do this exercise</h4>
+                    <h3>twice</h3>
+                    <h4>daily for</h4>
+                    <h3>03:00 minutes</h3>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="home-exercises max-width-1 m-auto">
+        <div class="home-exercise m-auto">
+            <div class="home-exercise3-img">
+                <img src="Meditation.png" alt="image">
+                <div class="h2">
+                    <h2>Meditation</h2>
+                </div>
+            </div>
+            <div class="about-img">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing. <br> Amet est, necessitatibus placeat nobis
+                    consequuntur nisi <br> animi voluptatem dolor natus odio illo pariatur <br> soluta nam blanditiis
+                    quod debitis harum provident <br> adipisci quisquam repudiandae? Ipsam, veritatis?</p>
+            </div>
+            <div class="home-exercise-content">
+                <!-- <h2>Build Rippling Abs</h2> -->
+                <span>
+                    <h4>You have to do this exercise</h4>
+                    <h3>once</h3>
+                    <h4>daily for</h4>
+                    <h3>30:00 minutes</h3>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="home-exercises max-width-1 m-auto">
+        <div class="home-exercise m-auto">
+            <div class="home-exercise1-img">
+                <img src="Plunk.png" alt="image">
+                <div class="h2">
+                    <h2>Plunk</h2>
+                </div>
+            </div>
+            <div class="about-img">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing. <br> Amet est, necessitatibus placeat nobis
+                    consequuntur nisi <br> animi voluptatem dolor natus odio illo pariatur <br> soluta nam blanditiis
+                    quod debitis harum provident <br> adipisci quisquam repudiandae? Ipsam, veritatis?</p>
+            </div>
+            <div class="home-exercise-content">
+                <!-- <h2>Build Rippling Abs</h2> -->
+                <span>
+                    <h4>You have to do this exercise</h4>
+                    <h3>twice</h3>
+                    <h4>daily for</h4>
+                    <h3>03:00 minutes</h3>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="home-exercises max-width-1 m-auto">
+        <div class="home-exercise m-auto">
+            <div class="home-exercise-img">
+                <img src="RockingPushUps.png" alt="image">
+                <div class="h2">
+                    <h2>RockingPushUps</h2>
+                </div>
+            </div>
+            <div class="about-img">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing. <br> Amet est, necessitatibus placeat nobis
+                    consequuntur nisi <br> animi voluptatem dolor natus odio illo pariatur <br> soluta nam blanditiis
+                    quod debitis harum provident <br> adipisci quisquam repudiandae? Ipsam, veritatis?</p>
+            </div>
+            <div class="home-exercise-content">
+                <!-- <h2>Build Rippling Abs</h2> -->
+                <span>
+                    <h4>You have to do this exercise</h4>
+                    <h3>twice</h3>
+                    <h4>daily for</h4>
+                    <h3>03:00 minutes</h3>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="home-exercises max-width-1 m-auto">
+        <div class="home-exercise m-auto">
+            <div class="home-exercise2-img">
+                <img src="VerticalLegCrunches.png" alt="image">
+                <div class="h2">
+                    <h2>VerticalLegCrunches</h2>
+                </div>
+            </div>
+            <div class="about-img">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing. <br> Amet est, necessitatibus placeat nobis
+                    consequuntur nisi <br> animi voluptatem dolor natus odio illo pariatur <br> soluta nam blanditiis
+                    quod debitis harum provident <br> adipisci quisquam repudiandae? Ipsam, veritatis?</p>
+            </div>
+            <div class="home-exercise-content">
+                <!-- <h2>Build Rippling Abs</h2> -->
+                <span>
+                    <h4>You have to do this exercise</h4>
+                    <h3>twice</h3>
+                    <h4>daily for</h4>
+                    <h3>03:00 minutes</h3>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="home-exercises max-width-1 m-auto">
+        <div class="home-exercise m-auto">
+            <div class="home-exercise-img">
+                <img src="squats.png" alt="image">
+                <div class="h2">
+                    <h2>Squats</h2>
+                </div>
+            </div>
+            <div class="about-img">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing. <br> Amet est, necessitatibus placeat nobis
+                    consequuntur nisi <br> animi voluptatem dolor natus odio illo pariatur <br> soluta nam blanditiis
+                    quod debitis harum provident <br> adipisci quisquam repudiandae? Ipsam, veritatis?</p>
+            </div>
+            <div class="home-exercise-content">
+                <!-- <h2>Build Rippling Abs</h2> -->
+                <span>
+                    <h4>You have to do this exercise</h4>
+                    <h3>twice</h3>
+                    <h4>daily for</h4>
+                    <h3>03:00 minutes</h3>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer max-width-2 m-auto">
+        Copyright &copy; www.ourHealthCareWorkout.com. All right reserved!
+    </div>
+
+</body>
+
+</html>
